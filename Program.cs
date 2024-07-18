@@ -21,13 +21,9 @@ new HostBuilder()
                    options.Connect(new Uri(context.Configuration["AppConfigurationEndpoint"].ToString()), tokenCredential);
                })*/;
     })
-    .ConfigureLogging((builder, logging) =>
-    {
-        logging.AddConsole();
-    })
     .ConfigureServices(services =>
     {
-        services.AddLogging()
+        services.AddLogging(configure => configure.AddConsole())
                 .AddApplicationInsightsTelemetryWorkerService()
                 .ConfigureFunctionsApplicationInsights();
     })

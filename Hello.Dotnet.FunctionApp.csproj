@@ -4,6 +4,8 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
     <OutputType>exe</OutputType>
     <Platform>x64</Platform>
+    <ApplicationInsightsResourceId>/subscriptions/65cede95-ee9a-4591-ac3b-7f7d59e1e2e1/resourceGroups/rg-test/providers/microsoft.insights/components/func-ryhill-test</ApplicationInsightsResourceId>
+    <UserSecretsId>defb4a05-5021-42be-8d0b-6114dacf9241</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -15,6 +17,7 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.ServiceBus" Version="5.20.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.17.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
